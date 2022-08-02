@@ -11,6 +11,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: const PreferredSize(
           preferredSize: Size(double.infinity, 60),
           child: CustomAppBar()

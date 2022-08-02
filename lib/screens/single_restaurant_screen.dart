@@ -12,14 +12,17 @@ class SingleRestaurantScreen extends StatelessWidget {
         children: [
           Stack(
             children: [
-              Container(
-                height: 250,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    fit: BoxFit.fill,
-                      image: AssetImage('${restaurant.imageUrl}')
-                  )
+              Hero(
+                tag: restaurant,
+                child: Container(
+                  height: 250,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      fit: BoxFit.fill,
+                        image: AssetImage('${restaurant.imageUrl}')
+                    )
+                  ),
                 ),
               ),
               Padding(

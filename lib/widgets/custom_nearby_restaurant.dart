@@ -29,13 +29,16 @@ class CustomNearbyRestaurant extends StatelessWidget {
                 children: [
                   Expanded(
                     flex:1,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          fit: BoxFit.fill,
-                          image: AssetImage('${restaurants[index].imageUrl}')
+                    child: Hero(
+                      tag: restaurants[index],
+                      child: Container(
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            fit: BoxFit.fill,
+                            image: AssetImage('${restaurants[index].imageUrl}')
+                          ),
+                          borderRadius: BorderRadius.circular(20)
                         ),
-                        borderRadius: BorderRadius.circular(20)
                       ),
                     ),
                   ),
